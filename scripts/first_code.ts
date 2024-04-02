@@ -21,6 +21,6 @@ const products = [new Products('Playstation 5', 5000)]
 products.push(new Products('Playstation 2', 1000))
 products.push(new Products('Playstation 1', 300))
 console.log(products);
-//products.forEach(product => console.log(product));
-products.every(product => product.value+=100);
+products.forEach(product => console.log(product));
+products.every(product => product.value+=110);
 products.forEach(product => console.log(product));
