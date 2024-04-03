@@ -1,0 +1,14 @@
+{
+    "prettier.resolveGlobalModules": true,
+    "prettier.useEditorConfig": false,
+    "typescript.format.semicolons": "remove",
+    "typescript.preferences.quoteStyle": "single",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "typescript.format.indentSwitchCase": true,
+    "typescript.suggest.autoImports": true,
+    "typescript.check.npmIsInstalled": true,
+    "vsintellicode.typescript.completionsEnabled": true,
+    "typescript.suggest.paths": true
+}

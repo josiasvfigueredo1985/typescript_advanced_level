@@ -1,24 +1,24 @@
 {
-  "ts-node": {
-    "files": true
-  },
-  "compilerOptions": {
-    "target": "ES5", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "allowJs": true, /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
-    "sourceMap": true, /* Create source map files for emitted JavaScript files. */
-    "outDir": "./output", /* Specify an output folder for all emitted files. */
-    "rootDir": "./scripts", /* Specify the root folder within your source files. */
-    "removeComments": true, /* Remove comments from source files. */
-    "strict": true, /* Enable all strict type-checking options. */
-    "noImplicitAny": true, /* Enable error reporting for expressions and declarations with an implied 'any' type. */
-    "esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-    "lib": [
-      "DOM",
-      "ES2022",
-      "ESNext.BigInt"
-    ], /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
-    "skipLibCheck": true, /* Skip type checking all .d.ts files. */
-    "checkJs": true,
-  },
+    "ts-node": {
+        "files": true
+    },
+    "compilerOptions": {
+        "target": "ES5" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+        "allowJs": true /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */,
+        "sourceMap": true /* Create source map files for emitted JavaScript files. */,
+        "outDir": "./output" /* Specify an output folder for all emitted files. */,
+        "rootDir": "./scripts" /* Specify the root folder within your source files. */,
+        "removeComments": true /* Remove comments from source files. */,
+        "strict": true /* Enable all strict type-checking options. */,
+        "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied 'any' type. */,
+        "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
+        "lib": [
+            "DOM",
+            "ES2022",
+            "ESNext.BigInt"
+        ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
+        "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+        "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+        "checkJs": true
+    }
 }

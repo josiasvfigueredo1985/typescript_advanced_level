@@ -3,6 +3,7 @@
 This document is a beginner-friendly guide to getting started with TypeScript. It aims to demonstrate real-world usage of TypeScript and provide some helpful tips along the way.
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Setting Up](#setting-up)
 3. [VS Code and Extensions](#vs-code-and-extensions)
@@ -20,16 +21,18 @@ Welcome to the world of TypeScript! TypeScript is a superset of JavaScript that 
 ## Setting Up
 
 Before we begin, make sure you have the following installed on your machine:
-- [Node.js](https://nodejs.org/en/download/current)
-- [Git](https://git-scm.com/downloads)
+
+-   [Node.js](https://nodejs.org/en/download/current)
+-   [Git](https://git-scm.com/downloads)
 
 ## VS Code and Extensions
 
 We'll be using Visual Studio Code (VS Code), a lightweight and powerful code editor, for our TypeScript development. Install it from [here](https://code.visualstudio.com/), and consider adding the following extensions to enhance your development experience:
-- [Material Icon](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
-- [TypeScript](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
+-   [Material Icon](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+-   [TypeScript](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next)
+-   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+-   [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
 ## Configuring Your Environment
 
