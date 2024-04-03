@@ -1,10 +1,15 @@
 // const company = "Google Inc"
 // company = "Amazon" // Does not work
+interface Company {
+    name: string
+}
 
-let company: string
-company = 'Microsoft Corporation'
-console.log(company) //;
+class Company implements Company {}
 
-company = 'Microsoft' // Does work
-console.log(`Company is: ${company}`)
-console.log('Test 2')
+let COMPANYdata: string
+COMPANYdata = 'Microsoft Corporation'
+console.log(COMPANYdata) //;
+
+COMPANYdata = 'Googl' // Does work
+console.log(`Company is: ${COMPANYdata}`)
+console.log('Tesdts')

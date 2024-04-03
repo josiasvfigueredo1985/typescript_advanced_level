@@ -10,14 +10,10 @@
             "name": "Run TS Code",
             "console": "integratedTerminal",
             "autoAttachChildProcesses": true,
-            "preLaunchTask": "npm: build",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
+            "preLaunchTask": "npm: dev",
+            "skipFiles": ["<node_internals>/**"],
             "program": "${file}",
-            "outFiles": [
-                "${workspaceFolder}/output/*.js"
-            ]
+            "outFiles": ["${workspaceFolder}/output/*.js"]
         }
     ]
 }
