@@ -7,15 +7,16 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Run TS Code",
             "console": "integratedTerminal",
-            
+            "autoAttachChildProcesses": true,
+            "preLaunchTask": "npm: build",
             "skipFiles": [
                 "<node_internals>/**"
             ],
             "program": "${file}",
             "outFiles": [
-                "${workspaceFolder}/**/*.js"
+                "${workspaceFolder}/output/*.js"
             ]
         }
     ]

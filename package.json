@@ -1,0 +1,16 @@
+{
+  "name": "typescript_course",
+  "version": "1.0.0",
+  "description": "Typescript course",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node index.js",
+    "dev": "nodemon index.ts"
+  },
+  "author": "Josias Valentim de Figueredo",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
