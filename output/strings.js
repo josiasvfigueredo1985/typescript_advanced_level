@@ -3,5 +3,5 @@ var company;
 company = "Microsoft Corporation";
 console.log(company);
 company = "Microsoft";
-console.log("Company: ".concat(company));
+console.log("Company:2efrfvrv ".concat(company));
 //# sourceMappingURL=strings.js.map
