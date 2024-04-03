@@ -6,4 +6,4 @@ company = "Microsoft Corporation"
  console.log(company) //;
  
 company = "Microsoft" // Does work
-console.log(`Company: ${company}`);
+console.log(`Company is: ${company}`);
