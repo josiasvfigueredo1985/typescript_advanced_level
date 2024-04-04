@@ -10,6 +10,31 @@
         "project": ["./tsconfig.json"]
     },
     "rules": {
-        "@typescript-eslint/no-magic-numbers": "error"
+        "max-params": ["error", 7],
+        "@typescript-eslint/no-magic-numbers": "error",
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "format": ["camelCase"],
+                "leadingUnderscore": "forbid",
+                "trailingUnderscore": "forbid",
+                "selector": "default"
+            },
+            {
+                "format": ["camelCase", "PascalCase"],
+                "selector": "import"
+            },
+            {
+                "format": ["camelCase"],
+                "leadingUnderscore": "forbid",
+                "trailingUnderscore": "forbid",
+                "selector": "variable"
+            },
+            {
+                "format": ["PascalCase"],
+                "selector": "typeLike"
+            }
+        ]
     }
 }

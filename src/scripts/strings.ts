@@ -1,15 +1,17 @@
 // const company = "Google Inc"
 // company = "Amazon" // Does not work
-interface Company {
+interface company {
     name: string
 }
 
 class Company implements Company {}
 
-let COMPANYdata: string
-COMPANYdata = 'Microsoft Corporation'
-console.log(COMPANYdata) //;
+let test_Camel: string
+COMP = 'Microsoft Corporation'
+console.log(COMP) //;
 
-COMPANYdata = 'Googl' // Does work
-console.log(`Company is: ${COMPANYdata}`)
+COMP = 'Googl' // Does work
+console.log(`Company is: ${COMP}`)
 console.log('Tesdts')
+let VARIABLE: string
+let variable_number: null
