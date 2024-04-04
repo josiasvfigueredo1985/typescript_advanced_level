@@ -1,4 +1,5 @@
 {
+    "eslint.experimental.useFlatConfig": false,
     "typescript.format.semicolons": "remove",
     "typescript.preferences.quoteStyle": "single",
     "javascript.format.semicolons": "remove",
