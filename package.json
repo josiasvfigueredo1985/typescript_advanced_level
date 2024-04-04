@@ -4,6 +4,7 @@
     "description": "Typescript course",
     "main": "index.js",
     "scripts": {
+        "lint": "eslint ./**/*.ts --fix",
         "dev": "tsc"
     },
     "author": "Josias Valentim de Figueredo",

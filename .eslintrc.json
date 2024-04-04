@@ -1,40 +1,63 @@
 {
-    "env": {
-        "es2021": true,
-        "node": true
-    },
-    "extends": "standard-with-typescript",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "project": ["./tsconfig.json"]
-    },
-    "rules": {
-        "max-params": ["error", 7],
-        "@typescript-eslint/no-magic-numbers": "error",
-        "@typescript-eslint/no-unused-vars": "error",
-        "@typescript-eslint/naming-convention": [
-            "error",
-            {
-                "format": ["camelCase"],
-                "leadingUnderscore": "forbid",
-                "trailingUnderscore": "forbid",
-                "selector": "default"
-            },
-            {
-                "format": ["camelCase", "PascalCase"],
-                "selector": "import"
-            },
-            {
-                "format": ["camelCase"],
-                "leadingUnderscore": "forbid",
-                "trailingUnderscore": "forbid",
-                "selector": "variable"
-            },
-            {
-                "format": ["PascalCase"],
-                "selector": "typeLike"
-            }
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": "standard-with-typescript",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": ["./tsconfig.json"]
+  },
+  "rules": {
+    "max-params": ["error", 7],
+    "@typescript-eslint/no-magic-numbers": [
+      "error",
+      {
+        "ignoreArrayIndexes": true,
+        "ignoreEnums": true,
+        "ignore": [-1, 1]
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "format": ["camelCase"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid",
+        "selector": "default"
+      },
+      {
+        "format": ["camelCase", "PascalCase"],
+        "selector": "import"
+      },
+      {
+        "format": ["camelCase"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid",
+        "selector": "variable"
+      },
+      {
+        "format": ["PascalCase"],
+        "selector": "typeLike"
+      },
+      {
+        "format": ["PascalCase"],
+        "selector": "variable",
+        "types": ["boolean"],
+        "prefix": [
+          "is",
+          "are",
+          "should",
+          "has",
+          "have",
+          "can",
+          "did",
+          "will",
+          "toBe"
         ]
-    }
+      }
+    ]
+  }
 }
