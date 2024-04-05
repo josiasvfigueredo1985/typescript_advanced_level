@@ -7,7 +7,7 @@ interface ICompany {
 class Company implements ICompany {
   name: string
 
-  constructor (name: string) {
+  constructor(name: string) {
     this.name = name
     return this
   }
