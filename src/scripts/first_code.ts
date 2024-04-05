@@ -3,7 +3,7 @@ console.log('Hello world! This is my first TypeScript code!')
 const user = 'John'
 console.log('Hello ' + user + '!. Welcome!')
 
-class Products implements Product {
+class Products implements IProduct {
   name: string
   value: number
 
@@ -12,7 +12,7 @@ class Products implements Product {
     this.value = productValue
   }
 }
-interface Product {
+interface IProduct {
   name: string
   value: number
 }
