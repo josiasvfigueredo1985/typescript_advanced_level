@@ -1,8 +1,0 @@
-{
-  "eslint.experimental.useFlatConfig": false,
-  "vsintellicode.typescript.completionsEnabled": true,
-  "terminal.integrated.cwd": "",
-  "eslint.lintTask.enable": true,
-  "eslint.probe": ["typescript", "typescriptreact"],
-  "eslint.workingDirectories": ["./src/**/*.ts"]
-}

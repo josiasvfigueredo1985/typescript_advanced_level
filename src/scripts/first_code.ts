@@ -7,12 +7,11 @@ class Products implements Product {
   name: string
   value: number
 
-  constructor(productName: string, productValue: number) {
+  constructor (productName: string, productValue: number) {
     this.name = productName
     this.value = productValue
   }
 }
-
 interface Product {
   name: string
   value: number
