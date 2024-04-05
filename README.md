@@ -156,4 +156,9 @@ npm add -D husky
         "prepare": "husky install",...`
 npm run prepare
 
-echo "npm run lint" > .husky/pre-commit
+move pre-commit file to first level husky folder 
+add the following lines:
+    `. "$(dirname -- "$0")/_/husky.sh"
+
+    npm run lint
+    exit code 0`

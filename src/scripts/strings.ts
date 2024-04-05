@@ -1,17 +1,22 @@
 // const company = "Google Inc"
 // company = "Amazon" // Does not work
-interface company {
+interface ICompany {
   name: string
 }
 
-class Company implements Company {}
+class Company implements ICompany {
+  name: string
 
-let COMP: string
-COMP = 'Microsoft Corporation'
-console.log(COMP) // ;
+  constructor (name: string) {
+    this.name = name
+    return this
+  }
+}
 
-COMP = 'Googl' // Does work
-console.log(`Company is: ${COMP}`)
-console.log('Tesdts')
-let VARIABLE: string
-let variable_number: null
+let company: string
+company = 'Microsoft Corporation'
+const c = new Company(company)
+console.log(c) // output: Company { name: 'Microsoft Corporation' }
+
+company = 'Google' // Does work
+console.log(`Company is: ${c.name}`) // output: Company is: Microsoft Corporation
