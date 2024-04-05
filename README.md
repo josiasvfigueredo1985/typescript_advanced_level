@@ -156,4 +156,4 @@ npm add -D husky
         "prepare": "husky install",...`
 npm run prepare
 
-npx husk add .husk/pre-commit
+echo "npm run lint" > .husky/pre-commit
