@@ -162,3 +162,14 @@ add the following lines:
 
     npm run lint
     exit code 0`
+
+npm add -D lint-staged
+    `.lintstagedrc.json`
+    Add lines: 
+     `{
+    "*.ts": [
+        "npm run lint",
+        "git add"
+    ]
+}`
+
