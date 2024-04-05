@@ -17,7 +17,7 @@ interface IProduct {
   value: number
 }
 
-const prices = [5000, 1000, 300]
+const prices = [5000, 1000, 500]
 const products = [new Products('Playstation 5', prices[0])]
 products.push(new Products('Playstation 2', prices[1]))
 products.push(new Products('Playstation 1', prices[2]))
