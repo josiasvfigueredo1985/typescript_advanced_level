@@ -147,3 +147,13 @@ The config that you've selected requires the following dependencies:
 eslint-config-standard-with-typescript@latest @typescript-eslint/eslint-plugin@^6.4.0 eslint@^8.0.1 eslint-plugin-import@^2.25.2 eslint-plugin-n@^15.0.0 || ^16.0.0 eslint-plugin-promise@^6.0.0 typescript@\*
 √ Would you like to install them now? · No / Yes
 √ Which package manager do you want to use? · npm
+
+`"scripts": {
+        "lint": "eslint ./src/**/*.ts --fix",...`
+npm add -D husky
+`"scripts": {
+        "lint": "eslint ./src/**/*.ts --fix",
+        "prepare": "husky install",...`
+npm run prepare
+
+npx husk add .husk/pre-commit
