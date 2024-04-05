@@ -9,42 +9,30 @@
     "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "max-params": ["error", 7],
-    "@typescript-eslint/no-magic-numbers": [
-      "error",
-      {
-        "ignoreArrayIndexes": true,
-        "ignoreEnums": true,
-        "ignore": [-1, 1]
-      }
-    ],
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/naming-convention": [
       "error",
       {
+        "selector": ["variable", "function", "method", "import"],
         "format": ["camelCase"],
         "leadingUnderscore": "forbid",
-        "trailingUnderscore": "forbid",
-        "selector": "default"
+        "trailingUnderscore": "forbid"
       },
       {
-        "format": ["camelCase", "PascalCase"],
-        "selector": "import"
+        "selector": ["typeLike", "enum", "class"],
+        "format": ["PascalCase"]
       },
       {
-        "format": ["camelCase"],
-        "leadingUnderscore": "forbid",
-        "trailingUnderscore": "forbid",
-        "selector": "variable"
-      },
-      {
+        "selector": ["interface"],
         "format": ["PascalCase"],
-        "selector": "typeLike"
+        "prefix": ["I"]
       },
       {
+        "selector": ["variable"],
         "format": ["PascalCase"],
-        "selector": "variable",
         "types": ["boolean"],
         "prefix": [
           "is",
@@ -56,6 +44,40 @@
           "did",
           "will",
           "toBe"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-magic-numbers": [
+      "error",
+      {
+        "ignoreArrayIndexes": true,
+        "ignoreEnums": true,
+        "ignore": [-1, 1],
+        "ignoreDefaultValues": true,
+        "ignoreNumericLiteralTypes": true,
+        "ignoreReadonlyClassProperties": true,
+        "ignoreTypeIndexes": true
+      }
+    ],
+    "lines-between-class-members": [
+      "error",
+      {
+        "enforce": [
+          {
+            "blankLine": "always",
+            "prev": "method",
+            "next": "method"
+          },
+          {
+            "blankLine": "never",
+            "prev": "field",
+            "next": "field"
+          },
+          {
+            "blankLine": "always",
+            "prev": "field",
+            "next": "method"
+          }
         ]
       }
     ]

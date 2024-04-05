@@ -1,20 +1,8 @@
 {
-    "eslint.enable": true,
-    "eslint.experimental.useFlatConfig": false,
-    "eslint.codeActionsOnSave.mode": "problems",
-    "typescript.format.semicolons": "remove",
-    "typescript.preferences.quoteStyle": "single",
-    "javascript.format.semicolons": "remove",
-    "javascript.preferences.quoteStyle": "single",
-    "typescript.format.indentSwitchCase": true,
-    "typescript.suggest.autoImports": true,
-    "typescript.check.npmIsInstalled": true,
-    "typescript.suggest.paths": true,
-    "typescript.format.enable": true,
-    "javascript.format.enable": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "vsintellicode.typescript.completionsEnabled": true,
-    "terminal.integrated.cwd": ""
+  "eslint.experimental.useFlatConfig": false,
+  "vsintellicode.typescript.completionsEnabled": true,
+  "terminal.integrated.cwd": "",
+  "eslint.lintTask.enable": true,
+  "eslint.probe": ["typescript", "typescriptreact"],
+  "eslint.workingDirectories": ["./src/**/*.ts"]
 }

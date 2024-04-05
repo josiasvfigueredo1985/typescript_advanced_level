@@ -6,7 +6,8 @@ console.log('Hello ' + user + '!. Welcome!')
 class Products implements Product {
   name: string
   value: number
-  constructor (productName: string, productValue: number) {
+
+  constructor(productName: string, productValue: number) {
     this.name = productName
     this.value = productValue
   }
@@ -16,6 +17,7 @@ interface Product {
   name: string
   value: number
 }
+
 const prices = [5000, 1000, 300]
 const products = [new Products('Playstation 5', prices[0])]
 products.push(new Products('Playstation 2', prices[1]))
