@@ -3,7 +3,7 @@
 interface ICompany {
   name: string
 }
-
+// Test
 class Company implements ICompany {
   name: string
 
