@@ -6,170 +6,110 @@ This is a small project aimed at demonstrating how to start coding with TypeScri
 
 ## Table of Contents
 
-1. [GitHub Account](#github-account)
-2. [Install All Dependencies](#install-all-dependencies)
-3. [VS Code and Extensions](#vs-code-and-extensions)
-4. [Prepare Your Local Repo](#prepare-your-local-repo)
-5. [Install TypeScript on Your Repo](#install-typescript-on-your-repo)
-6. [Update tsconfig.json File](#update-tsconfigjson-file)
-7. [NPM Configuration](#npm-configuration)
-8. [Create Your First TypeScript Code](#create-your-first-typescript-code)
-9. [Configure Auto Compile and Run Current File Code](#configure-auto-compile-and-run-current-file-code)
-10. [Run Your Code](#run-your-code)
-11. [Update Your Code and Run It Again](#update-your-code-and-run-it-again)
-12. [Optionals](#optionals)
+1. [Install](#install)
+2. [VS Code and Extensions](#vs-code-and-extensions)
+3. [Prepare Your Local Repo](#prepare-your-local-repo)
+4. [Project Dependencies](#project-dependencies)
 
-### GitHub Account
+### Install
 
-This is mandatory 😁 (Hey, I am here, right?)
+- [Node.js](https://nodejs.org/en/download/current)
+- [TypeScript](https://www.typescriptlang.org/download)
+- [Git](https://git-scm.com/downloads)
 
-### Install All Dependencies
+### VS Code and Extensions
 
--   [Node.js](https://nodejs.org/en/download/current)
--   [TypeScript](https://www.typescriptlang.org/download)
--   [Git](https://git-scm.com/downloads)
+VS Code is mandatory but extensions are optional but highly recommended.
 
-### VS Code and extensions
-
-VS Code is mandatory but extensions are optional but highly recommended
-
--   [VS Code](https://code.visualstudio.com/)
--   [Material Icon](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
--   [TypeScript](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next)
--   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
--   [Dracula Pure](https://marketplace.visualstudio.com/items?itemName=blackblackcat.dracula-pure)
--   [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
--   [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
--   [TabNine](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode)
--   [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+- [VS Code](https://code.visualstudio.com/)
+- [Material Icon](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+- [TypeScript](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Dracula Pure](https://marketplace.visualstudio.com/items?itemName=blackblackcat.dracula-pure)
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [TabNine](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode)
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
 ### Prepare Your Local Repo
 
--   Create a new folder
--   Open New Terminal on VS Code
--   Command: `git init`
--   Create `.gitignore` file
--   Create `README.md` file
--   Open Source Control on VS Code and commit your changes
--   Publish your branch
--   Create a branch from master (Optional)
+- Run `npm ci`
 
-### Install TypeScript on Your Repo
+### Project Dependencies
 
--   Command 1: `npm install -g typescript`
--   Command 2: `tsc --init` (tsconfig.json will be added automatically to your project folder, no need to modify for now)
+Here is a brief description of each dependency used in the project:
 
-### Update tsconfig.json File
+- **`@types/node`**
+  - Provides TypeScript type definitions for Node.js, helping to ensure that TypeScript code interacts correctly with Node.js APIs.
 
--   Change line to `"outDir": "./output",`
--   Uncomment `sourceMap` line
+- **`@typescript-eslint/eslint-plugin`**
+  - An ESLint plugin that provides TypeScript-specific rules, helping to maintain clean and consistent TypeScript code.
 
-### NPM Configuration
+- **`cross-env`**
+  - Allows you to set environment variables in a way that is compatible with different operating systems, useful for configuring environment variables in npm scripts.
 
--   Command: `npm init`
--   Open `package.json` file that was created on the step before and add the following line inside "scripts": `"build": "tsc"`
+- **`eslint`**
+  - A linting tool for JavaScript and TypeScript that analyzes code for patterns and issues, helping to maintain cleaner and error-free code.
 
-### Create Your First TypeScript Code
+- **`eslint-config-prettier`**
+  - Disables ESLint rules that may conflict with Prettier, a code formatting tool, allowing Prettier and ESLint to work together without conflicts.
 
--   Add a `src` folder
--   Add an `output` folder
--   Add `<nameYouWant>.ts` file into `src` folder
--   Add the following code to it:
-    ```typescript
-    class MyFirstCode {
-        name: string
-        age: number
-        constructor(name: string, age: number) {
-            this.name = name
-            this.age = age
-        }
-    }
+- **`eslint-config-standard-with-typescript`**
+  - An ESLint configuration that includes Standard Style rules for JavaScript and TypeScript, ensuring consistent code style.
 
-    class Greetings extends MyFirstCode {
-        greet() {
-            console.log(
-                `Hello ${this.name}! Congrats! Your age is ${this.age}!`
-            )
-        }
-    }
+- **`eslint-plugin-import`**
+  - An ESLint plugin that helps to ensure correct and ordered imports in JavaScript/TypeScript code.
 
-    const person = new Greetings('John', 25)
-    person.greet()
-    ```
+- **`eslint-plugin-n`**
+  - An ESLint plugin that provides additional rules for Node.js code, ensuring better practices specific to the Node.js environment.
 
-### Configure Auto Compile and Run Current File Code
+- **`eslint-plugin-prettier`**
+  - An ESLint plugin that integrates Prettier directly into the linting process, ensuring that code is formatted correctly according to Prettier rules.
 
--   Open `RUN AND DEBUG` menu on VS Code
--   Select `create a launch.json file`
--   Select `Node.js` option
--   Add the following lines inside configurations:
-    ```json
-    "preLaunchTask": "npm: build",
-    "console": "integratedTerminal",
-    ```
--   Modify line to `"program": "${file}",`
+- **`eslint-plugin-promise`**
+  - An ESLint plugin that provides rules to improve the use of Promises in JavaScript/TypeScript code, ensuring correct and problem-free usage.
 
-### Run Your Code
+- **`glob`**
+  - A library that allows for file and directory matching using glob patterns, useful for tasks like finding TypeScript files.
 
--   Press `F5` and see the magic happens!🧙‍♂️
-    -   JavaScript files should be created into `output` folder
-    -   Terminal should open with compiling status
-    -   After compiling, TypeScript code should run successfully
+- **`husky`**
+  - A tool that facilitates running scripts in Git hooks (such as `pre-commit` and `pre-push`), helping to ensure code is in a valid state before committing to the repository.
 
-### Update Your Code and Run It Again
+- **`lint-staged`**
+  - Runs linters only on files that are about to be committed, improving the efficiency of the linting process and ensuring that only modified files are checked.
 
--   It should update and run automatically according to your changes 🤖
+- **`prettier`**
+  - A code formatting tool that helps to maintain consistent and clean code style by automatically formatting code according to predefined rules.
 
-### Optionals
+- **`ts-loader`**
+  - A Webpack loader that compiles TypeScript files into JavaScript, integrating TypeScript with the Webpack build process.
 
--   Add `output` folder to .gitignore
--   Commit your changes to your repository
--   Check out your GitHub repository
--   Always commit your changes and follow it with GitLens
--   Add ESLint integration to your project (Google it)
--   Add Husky integration and pre-commit configurations (Google it)
+- **`ts-node`**
+  - A TypeScript executable that allows running TypeScript files directly in Node.js without needing pre-compilation.
 
-**❤️💻HAPPY CODING!!!💻❤️**
+- **`ts-node-dev`**
+  - A development utility for TypeScript that provides automatic reloading and a faster, more efficient development experience.
 
-npm add -D eslint
-npx eslint --init
-You can also run this command directly using 'npm init @eslint/config'.
-√ How would you like to use ESLint? · style
-√ What type of modules does your project use? · esm
-√ Which framework does your project use? · none
-√ Does your project use TypeScript? · No / Yes
-√ Where does your code run? · node
-√ How would you like to define a style for your project? · guide
-√ Which style guide do you want to follow? · standard-with-typescript
-√ What format do you want your config file to be in? · JSON
-Checking peerDependencies of eslint-config-standard-with-typescript@latest
-The config that you've selected requires the following dependencies:
-eslint-config-standard-with-typescript@latest @typescript-eslint/eslint-plugin@^6.4.0 eslint@^8.0.1 eslint-plugin-import@^2.25.2 eslint-plugin-n@^15.0.0 || ^16.0.0 eslint-plugin-promise@^6.0.0 typescript@\*
-√ Would you like to install them now? · No / Yes
-√ Which package manager do you want to use? · npm
+- **`typescript`**
+  - The TypeScript compiler that transforms TypeScript code into JavaScript, enabling the use of advanced TypeScript features in development.
 
-`"scripts": {
-        "lint": "eslint ./src/**/*.ts --fix",...`
-npm add -D husky
-`"scripts": {
-        "lint": "eslint ./src/**/*.ts --fix",
-        "prepare": "husky install",...`
-npm run prepare
+- **`webpack`**
+  - A module bundler for JavaScript that compiles and optimizes code and its assets into one or more output files.
 
-move pre-commit file to first level husky folder 
-add the following lines:
-    `. "$(dirname -- "$0")/_/husky.sh"
+- **`webpack-cli`**
+  - A command-line interface for Webpack, allowing you to run and configure Webpack from the terminal.
 
-    npm run lint
-    exit code 0`
-
-npm add -D lint-staged
-    `.lintstagedrc.json`
-    Add lines: 
-     `{
-    "*.ts": [
-        "npm run lint",
-        "git add"
-    ]
-}`
-
+<style>
+  .centered {
+    text-align: center;
+  }
+</style>
+<div class="centered">
+---------------------------------------------------------------------------------------------------------------------------------
+<br></br>
+🤖Done with Chat-GPT helping🤖
+<br></br>
+❤️💻HAPPY CODING!!!💻❤️
+<br></br>
+---------------------------------------------------------------------------------------------------------------------------------
+</div>
