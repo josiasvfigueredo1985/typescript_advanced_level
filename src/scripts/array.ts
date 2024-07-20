@@ -32,3 +32,10 @@ const moviesCategoryByYear: Array<string | number> = [
   'Blockbuster',
   2020,
 ]
+
+moviesCategoryByYear.push('Drama', 2000)
+console.log(moviesCategoryByYear) // [ 'Comedy', 2000, 'Action', 2001, 'Blockbuster', 2020, 'Drama', 2000 ]
+console.log(moviesCategoryByYear.pop()) // 2000
+console.log(moviesCategoryByYear) // [ 'Comedy', 2000, 'Action', 2001, 'Blockbuster', 2020, 'Drama' ]
+console.log(moviesCategoryByYear.shift()) // Comedy
+console.log(moviesCategoryByYear) // [ 2000, 'Action', 2001, 'Blockbuster', 2020, 'Drama' ]

@@ -1,22 +1,21 @@
-// const company = "Google Inc"
-// company = "Amazon" // Does not work
-interface ICompany {
-  name: string
-}
-// Test
-class Company implements ICompany {
-  name: string
-
-  constructor(name: string) {
-    this.name = name
-    return this
-  }
-}
-
 let company: string
 company = 'Microsoft Corporation'
-const c = new Company(company)
-console.log(c) // output: Company { name: 'Microsoft Corporation' }
+console.log(company) // Simple string
 
-company = 'Google' // Does work
-console.log(`Company is: ${c.name}`) // output: Company is: Microsoft Corporation
+const firstName: string = 'John'
+const lastName: string = 'Doe'
+const fullName: string = firstName + ' ' + lastName
+console.log(fullName) // String concatenated
+
+const str1: string = 'Hello, '
+const str2: string = 'World!'
+const result: string = str1.concat(str2)
+console.log(result) // Concat method
+
+company = 'Google'
+console.log(`Company is: ${company}`) // String interpolation
+
+const multiLineString: string = `This is a
+multiline string
+in TypeScript.`
+console.log(multiLineString)

@@ -17,3 +17,9 @@ pixKey = 16659959
 console.log(pixKey)
 pixKey = 'myEmail@gmail.com'
 console.log(pixKey)
+
+const returnValue = (value: string | number): string | number => {
+  return `Value is: ${value}`
+}
+console.log(returnValue(1)) // Value is: 1
+console.log(returnValue('test')) // Value is: test

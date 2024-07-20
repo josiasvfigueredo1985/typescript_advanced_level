@@ -1,4 +1,4 @@
-const userInfo = ['1', 'John', 'new Date()'] // Infered as an tuple
+const userInfo = ['1', 'John', 'new Date()'] // Inferred as an tuple
 
 console.log(typeof userInfo)
 

@@ -5,5 +5,5 @@ let serverConfig: object = {
   password: '484848kjhjkh',
 }
 console.log(serverConfig) // { server: 'localhost', ip: '127.0.0.1', password: '484848kjhjkh' }
-serverConfig = { sever: 'Google Cloud Platform' }
-console.log(serverConfig) // { sever: 'Google Cloud Platform' }
+serverConfig = { server: 'Google Cloud Platform' }
+console.log(serverConfig) // { server: 'Google Cloud Platform' }

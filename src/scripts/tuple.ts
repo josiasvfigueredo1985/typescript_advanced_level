@@ -17,3 +17,13 @@ weekDay = [
   'Saturday',
   'Sunday',
 ]
+
+const usr = {
+  name: 'User',
+  age: 36,
+}
+let record: [object, string, number, boolean]
+
+record = [usr, 'Test', 1, false]
+// record = [usr, 'Test', 1, 1] // error
+console.log(record)
