@@ -2,7 +2,7 @@
 
 **_To read this with better formatting, right-click on the file in Explorer, choose "Open With", then select "Markdown Preview"._**
 
-This is a small project aimed at demonstrating how to start coding with TypeScript without worrying about transpile it each time you need to run your code. TypeScript is awesome, but the fact that we need to transpile it to JavaScript can be annoying, especially for beginners. So, here is my contribution to help you to learn TypeScript in the easy mode, just clone this repo, follow the instructions and let's code!
+This is a project aimed at demonstrating how to code with TypeScript without worrying about transpile it each time you need to run your code. TypeScript is awesome, but the fact that we need to transpile it to JavaScript can be annoying, especially for beginners. So, here is my contribution to help you to learn TypeScript in the easy mode, just clone this repo, follow the instructions and let's code!
 
 ## What you will find in this project?
 - Auto bundling and running: When you perform any of execution options, the current typescript file will be transpiled to a `js` file in the `dist/` folder, which will be created on the first run and overwrite the previous file on the following run and also will run the `js` file in sequence    
