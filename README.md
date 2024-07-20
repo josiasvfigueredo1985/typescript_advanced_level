@@ -2,7 +2,23 @@
 
 **_To read this with better formatting, right-click on the file in Explorer, choose "Open With", then select "Markdown Preview"._**
 
-This is a small project aimed at demonstrating how to start coding with TypeScript without worrying about compiling it each time you need to run your code. TypeScript is awesome, but the fact that we need to compile it to JavaScript can be annoying, especially for beginners. So, here are my tips after some research to make your start easy and satisfactory!
+This is a small project aimed at demonstrating how to start coding with TypeScript without worrying about transpile it each time you need to run your code. TypeScript is awesome, but the fact that we need to transpile it to JavaScript can be annoying, especially for beginners. So, here is my contribution to help you to learn TypeScript in the easy mode, just clone this repo, follow the instructions and let's code!
+
+## What you will find in this project?
+- Auto bundling and running: When you perform any of execution options, the current typescript file will be transpiled to a `js` file in the `dist/` folder, which will be created on the first run and overwrite the previous file on the following run and also will run the `js` file in sequence    
+- Lint: EsLint has some settings to help you to avoid common errors when writing code and also will suggest good practices to follow
+- Husky: Set to run lint before a commit, others commands can be added accordin your necessity
+- Basic typescript examples: These examples help to understand how typescript works, considering that is a beginner level project.
+
+## Execution Options
+There's two options to run a TypeScript file on this project:
+
+1- Hit `F5` key
+
+2 - Run following commands on terminal:
+* npx webpack --mode development your_file.ts-
+* node dist/bundle.js-
+
 
 ## Table of Contents
 
