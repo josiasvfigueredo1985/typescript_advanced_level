@@ -5,7 +5,7 @@
 This is a project aimed at demonstrating how to code with TypeScript without worrying about transpile it each time you need to run your code. TypeScript is awesome, but the fact that we need to transpile it to JavaScript can be annoying, especially for beginners. So, here is my contribution to help you to learn TypeScript in the easy mode, just clone this repo, follow the instructions and let's code!
 
 ## What you will find in this project?
-- Auto bundling and running: When you perform any of execution options, the current typescript file will be transpiled to a `js` file in the `dist/` folder, which will be created on the first run and overwrite the previous file on the following run and also will run the `js` file in sequence    
+- Auto bundling and running: When you perform any of execution options, the current typescript file will be bundled to a `js` file in the `dist/` folder, which will be created on the first run and overwrite the previous file on the following run and also will run the `js` file in sequence    
 - Lint: EsLint has some settings to help you to avoid common errors when writing code and also will suggest good practices to follow
 - Husky: Set to run lint before a commit, others commands can be added accordin your necessity
 - Basic typescript examples: These examples help to understand how typescript works, considering that is a beginner level project.
@@ -26,6 +26,9 @@ There's two options to run a TypeScript file on this project:
 2. [VS Code and Extensions](#vs-code-and-extensions)
 3. [Prepare Your Local Repo](#prepare-your-local-repo)
 4. [Project Dependencies](#project-dependencies)
+5. [Detailed Folder Structure and Configurations](#detailed-folder-structure-and-configurations)
+    1. [Folders](#folders)
+    2. [Files](#files)
 
 ### Install
 
@@ -53,7 +56,7 @@ VS Code is mandatory but extensions are optional but highly recommended.
 
 ### Project Dependencies
 
-Here is a brief description of each dependency used in the project:
+Here is a brief description of each dependency used for this project:
 
 - **`@types/node`**
   - Provides TypeScript type definitions for Node.js, helping to ensure that TypeScript code interacts correctly with Node.js APIs.
@@ -115,6 +118,53 @@ Here is a brief description of each dependency used in the project:
 - **`webpack-cli`**
   - A command-line interface for Webpack, allowing you to run and configure Webpack from the terminal.
 
+### Detailed Folder Structure and Configurations
+#### Folders
+- **`.husky`**
+  - Pre-commit configurations, others settings can be added as well, such as pre-push and post-merge;
+  - The "_" folder store template files with proper names and extesions for each setting;
+  - In order to add other setting, copy the template file to the ".husky" as done with "pre-commit" setting.
+
+- **`.vscode`**
+  - Json files with custom configurations, no need to change.
+
+- **`dist`**
+  - Folder that store the bundled typescript file.
+
+- **`src/scripts`**
+  - All scripts containing the basics of typescript, although they are all parametrized with eslint, which is configured as detailed below.
+
+#### Files
+- **`.eslintignore`**
+  - Configuration file that lists the files and directories to be ignored by ESLint during code linting.
+
+- **`.eslintrc.json`**
+  - Main configuration file for ESLint, containing settings, rules, and plugins. You can customize this file according to your project’s linting requirements.
+
+- **`.gitignore`**
+  - Configuration file specifying files and directories to be ignored by Git. These items won’t be tracked or pushed to your repository.
+
+- **`.lintstagedrc.json`**
+  - Configuration file that defines commands to be executed on staged files before a commit. This is commonly used to run linters or formatters, for this project these commands are executed by Husky.
+
+- **`.prettierrc.json`**
+  - Configuration file for Prettier, a code formatter. It contains formatting rules like line width, tab width, and style preferences, for this project only a basic configuration was set due ESLint rules already cover all the rest.
+
+- **`package-lock.json`**
+  - Auto-generated file that ensures the consistency of installed node modules across environments. It records the exact version of each installed dependency.
+
+- **`package.json`**
+  - Core configuration file for a Node.js project. It includes metadata, scripts, dependencies, and versioning information for the project.
+
+- **`README.md`**
+  - A markdown file providing an overview of the project, including setup instructions, usage guidelines, and other important information you can add on here.
+
+- **`tsconfig.json`**
+  - Configuration file for TypeScript that specifies compiler options, file inclusions, and TypeScript version. It defines how the TypeScript code is compiled.
+
+- **`webpack.config.js`**
+  - Configuration file for Webpack, a module bundler. It defines how the project’s modules are compiled, bundled, and transformed.
+
 <style>
   .centered {
     text-align: center;
@@ -123,7 +173,7 @@ Here is a brief description of each dependency used in the project:
 <div class="centered">
 ---------------------------------------------------------------------------------------------------------------------------------
 <br></br>
-🤖Done with Chat-GPT helping🤖
+🤖Done with Chat-GPT assistance🤖
 <br></br>
 ❤️💻HAPPY CODING!!!💻❤️
 <br></br>
