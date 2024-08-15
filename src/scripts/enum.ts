@@ -45,5 +45,14 @@ for (const key in PermissionString) {
   // ADMIN
   // USER
   // READONLY
-  console.log(key)
 }
+
+// Loop to print the enum values
+for (const value of Object.values(PermissionString)) {
+  console.log(value)
+  // Output
+  // Administrator
+  // User
+  // Readonly User
+}
+console.log(PermissionString.ADMIN === 'Administrator') // true
