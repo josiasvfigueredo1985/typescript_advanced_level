@@ -1,11 +1,12 @@
 const response = '404'
-// Default funtion
+// Default function
 function returnResponse(response: string): string {
   return response
 }
 
 console.log(returnResponse(response)) // 404
 
+// Arrow functions
 const arrReturnResponse = (resp: string): string => {
   return resp
 }
