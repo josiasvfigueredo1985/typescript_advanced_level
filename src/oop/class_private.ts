@@ -21,7 +21,7 @@ class Bank {
 }
 
 const bankOfAmerica = new Bank()
-console.log(bankOfAmerica.withDrawFromATM(10001))
+console.log(bankOfAmerica.withDrawFromATM(10001)) // Required amount not available!
 
 class Bank24Hs extends Bank {
   // Only protected and public methods are visible to the child class
@@ -31,4 +31,4 @@ class Bank24Hs extends Bank {
 }
 
 const myBank = new Bank24Hs()
-console.log(myBank.withDrawl(1000))
+console.log(myBank.withDrawl(1000)) // 9000
