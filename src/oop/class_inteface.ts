@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
 
-// Abstract class to define protected property
+// Abstract class to define specific property
 abstract class CarFactoryInfo {
   constructor(
     public year: number,
@@ -8,7 +8,7 @@ abstract class CarFactoryInfo {
   ) {}
 }
 
-// Interface to define public properties
+// Interface to define common properties
 interface ICarInfo extends CarFactoryInfo {
   model: string
   color: string
