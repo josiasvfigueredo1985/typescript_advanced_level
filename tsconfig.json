@@ -21,7 +21,11 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "checkJs": true,
     "noLib": false,
-    "allowUnreachableCode": false
+    "allowUnreachableCode": false,
+    "baseUrl": "./",
+    "paths": {
+      "*": ["node_modules/*", "src/*"]
+    },
   },
   "include": [
     "src/**/*"

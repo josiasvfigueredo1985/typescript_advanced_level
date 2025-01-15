@@ -1,6 +1,5 @@
 {
     "*.ts": [
-        "npm run lint",
-        "git add"
+        "npm run lint"
     ]
 }

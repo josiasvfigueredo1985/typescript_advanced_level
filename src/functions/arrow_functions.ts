@@ -12,7 +12,7 @@ const arrReturnResponse = (resp: string): string => {
 }
 console.log(arrReturnResponse(response)) // 404
 
-const printAnything = (values: any): any => {
+const printAnything = (values: unknown): void => {
   console.log(values)
 }
 printAnything(1) // 1

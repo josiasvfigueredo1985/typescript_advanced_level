@@ -1,20 +1,18 @@
-# TypeScript - Easy Beginning Tutorial
-
-**_To read this with better formatting, right-click on the file in Explorer, choose "Open With", then select "Markdown Preview"._**
-
-This is a project aimed at demonstrating how to code with TypeScript without worrying about transpile it each time you need to run your code. TypeScript is awesome, but the fact that we need to transpile it to JavaScript can be annoying, especially for beginners. So, here is my contribution to help you to learn TypeScript in the easy mode, just clone this repo, follow the instructions and let's code!
+## Typescript Advance Course Practices
+- Here you find code from my practice with TS advanced course
 
 ## What you will find in this project?
 - Auto bundling and running: When you perform any of execution options, the current typescript file will be bundled to a `js` file in the `dist/` folder, which will be created on the first run and overwrite the previous file on the following run and also will run the `js` file in the sequence;    
 - Linter: ***EsLint** has some settings to help you to avoid common errors when writing code and also will suggest good practices to follow;
-- Husky: Set to run lint before a commit, others commands can be added accordin your necessity
+- Husky: Set to run lint before a commit, others commands can be added according your necessity
 - Basic typescript examples: These examples help to understand how typescript works, considering that is a beginner level project.
 
-**_*Please consider that all disabled rules are used just for example puposes, all the rules set on EsLint are updated and according with good practices for TypeScript, so avoid using the examples with disabled EsLint rules_**.
+**_*Please consider that all disabled rules are used just for example purposes, all the rules set on EsLint are updated and according with good practices for TypeScript, so avoid using the examples with disabled EsLint rules_**.
 
 ## Execution Options
 
 #### Easy way
+
 1- Hit `F5` key.
 
 #### Command Line
@@ -125,7 +123,7 @@ Here is a brief description of each dependency used for this project:
 #### Folders
 - **`.husky`**
   - Pre-commit configurations, others settings can be added as well, such as pre-push and post-merge;
-  - The "_" folder store template files with proper names and extesions for each setting;
+  - The "_" folder store template files with proper names and extensions for each setting;
   - In order to add other setting, copy the template file to the ".husky" as done with "pre-commit" setting.
 
 - **`.vscode`**

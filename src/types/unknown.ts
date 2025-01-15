@@ -8,6 +8,7 @@ results = 'Successfully created!'
 console.log(typeof results) // string
 
 // Differences between any and unknown
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const num: any = 150
 const unkNum: unknown = 250
 console.log(unkNum)

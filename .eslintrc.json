@@ -5,7 +5,15 @@
   },
   "extends": [
     "standard-with-typescript",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": [
+    "import"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -21,7 +29,7 @@
         "semi": false,
         "singleQuote": true,
         "trailingComma": "es5",
-        "endOfLine":"auto"
+        "endOfLine": "auto"
       }
     ],
     "max-params": [
@@ -34,24 +42,33 @@
     "sort-imports": [
       "error",
       {
-        "order": "asc",
-        "groups": [
-          [
-            "builtin",
-            "external"
-          ],
-          [
-            "internal",
-            "parent",
-            "sibling",
-            "index"
-          ]
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": [
+          "none",
+          "all",
+          "multiple",
+          "single"
         ]
       }
     ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["builtin", "external"],
+          "internal",
+          ["parent", "sibling", "index"]
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "desc",
+          "caseInsensitive": true
+        }
+      }
+    ],
     "no-duplicate-imports": "error",
-    "eslint-plugin-import/first": "off",
-    "eslint-plugin-import/no-deprecated": "off",
     "@typescript-eslint/no-floating-promises": "error",
     "@typescript-eslint/naming-convention": [
       "error",
@@ -59,8 +76,7 @@
         "selector": [
           "variable",
           "function",
-          "method",
-          "import"
+          "method"
         ],
         "format": [
           "camelCase"
@@ -119,7 +135,7 @@
         "ignoreEnums": true,
         "ignore": [
           -1,
-          1, 
+          1,
           0
         ],
         "ignoreDefaultValues": true,
@@ -150,5 +166,10 @@
         ]
       }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }
