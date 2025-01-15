@@ -31,7 +31,24 @@
     "@typescript-eslint/no-unused-vars": "error",
     "no-useless-constructor": "off",
     "@typescript-eslint/no-useless-constructor": "error",
-    "sort-imports": "error",
+    "sort-imports": [
+      "error",
+      {
+        "order": "asc",
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          [
+            "internal",
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ]
+      }
+    ],
     "no-duplicate-imports": "error",
     "eslint-plugin-import/first": "off",
     "eslint-plugin-import/no-deprecated": "off",
