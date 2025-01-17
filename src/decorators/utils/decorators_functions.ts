@@ -45,3 +45,13 @@ export function decoratorAttribute(target: unknown, propertyName: string) {
     configurable: true,
   })
 }
+
+export function decoratorGetSet(value: boolean) {
+  return function (
+    target: unknown,
+    property: string,
+    descriptor: PropertyDescriptor
+  ) {
+    descriptor.enumerable = value
+  }
+}
