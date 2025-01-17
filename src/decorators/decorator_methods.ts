@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
-import { decoratorMethod } from './utils/debug'
+import { decoratorMethod } from './utils/decorators_functions'
 
 class HandleMessage {
   @decoratorMethod

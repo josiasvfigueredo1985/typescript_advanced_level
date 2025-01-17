@@ -30,3 +30,18 @@ export function decoratorMethod(
     })
   }
 }
+
+export function decoratorAttribute(target: unknown, propertyName: string) {
+  let value: string
+
+  Object.defineProperty(target, propertyName, {
+    get() {
+      return value.toUpperCase()
+    },
+    set(newValue: string) {
+      value = newValue
+    },
+    enumerable: true,
+    configurable: true,
+  })
+}
