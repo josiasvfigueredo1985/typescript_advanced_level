@@ -35,5 +35,9 @@
         "typescript": "^5.7.3",
         "webpack": "^5.93.0",
         "webpack-cli": "^5.1.4"
+    },
+    "dependencies": {
+        "@types/reflect-metadata": "^0.0.5",
+        "reflect-metadata": "^0.2.2"
     }
 }
