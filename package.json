@@ -7,9 +7,11 @@
         "lint": "eslint ./src/**/*.ts --fix",
         "prepare": "husky install",
         "tpl": "tsc",
-        "dev": "webpack --mode development",
+        "dev": "webpack --mode development \"concurrently \"npm run sass\" \"npm run tsc\"",
         "prd": "webpack --mode production",
-        "build": "cross-env WEBPACK_ENTRY_FILE=$npm_config_entry webpack --mode development"
+        "build": "cross-env WEBPACK_ENTRY_FILE=$npm_config_entry webpack --mode development",
+        "sass": "sass --watch --style=compressed ./src/calculator/assets/scss:./src/calculator/assets/scss",
+        "tsc": "tsc --watch"
     },
     "author": "Josias Valentim de Figueredo",
     "license": "MIT",
@@ -34,7 +36,9 @@
         "ts-node-dev": "^2.0.0",
         "typescript": "^5.7.3",
         "webpack": "^5.93.0",
-        "webpack-cli": "^5.1.4"
+        "webpack-cli": "^5.1.4",
+        "sass": "^1.49.8",
+        "concurrently": "^6.2.0"
     },
     "dependencies": {
         "@types/reflect-metadata": "^0.0.5",
