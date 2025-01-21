@@ -135,12 +135,6 @@
         ]
       }
     ],
-    "@typescript-eslint/no-extra-non-null-assertion": [
-      "error",
-      {
-        "allowNullableAssertion": true
-      }
-    ],
     "@typescript-eslint/no-magic-numbers": [
       "error",
       {
