@@ -1,3 +1,6 @@
+import CalculatorControl from './calculator/calculatorControl.js'
+
 console.log('Starting the project')
 
-// const calculator = new CalculatorControl()
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const calculate = new CalculatorControl()
