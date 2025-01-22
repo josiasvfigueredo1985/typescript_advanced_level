@@ -1,3 +1,5 @@
+/* eslint-disable no-eval */
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 interface IOperationsOptions {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onCalculation: any
@@ -42,11 +44,23 @@ export default class Operations {
     this.onCalculation(result)
   }
 
+  percentage(): string {
+    const values = this.ops.join('')
+    const lastValue = values.substring(values.search('%') + 1)
+    const newValue = values.replace(
+      `%${lastValue}`,
+      `*${Number(lastValue) * 0.01}`
+    )
+    return eval(newValue).toString()
+  }
+
   getResults(): string {
     let results: string
+    const values = this.ops.join('')
     try {
-      // eslint-disable-next-line no-eval
-      results = eval(this.ops.join('')).toString()
+      results = values.includes('%')
+        ? this.percentage()
+        : eval(values).toString()
     } catch (error) {
       results = 'error'
     }

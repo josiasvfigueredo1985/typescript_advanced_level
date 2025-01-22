@@ -39,6 +39,7 @@ export default class CalculatorControl {
           case 'subtracao':
           case 'multiplicacao':
           case 'divisao':
+          case 'porcentagem':
             this.addOperator(target.dataset.valor ?? '')
             break
           case 'ponto':
@@ -48,8 +49,6 @@ export default class CalculatorControl {
             this.display.content = '0'
             break
           case 'desfazer':
-            break
-          case 'porcentagem':
             break
 
           case 'igual':
