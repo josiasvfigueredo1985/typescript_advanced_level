@@ -43,6 +43,7 @@ export default class CalculatorControl {
             this.addOperator(target.dataset.valor ?? '')
             break
           case 'ponto':
+            this.addDot(target.dataset.valor ?? '')
             break
           case 'limpar':
             this.ops.clear()
@@ -86,6 +87,18 @@ export default class CalculatorControl {
         this.addOps('0')
       }
       this.addOps(operator)
+    }
+  }
+
+  addDot(dot: string): void {
+    if (!isNaN(Number(this.ops.lastPosition))) {
+      const value = this.ops.lastPosition.toString() + dot
+      this.ops.lastPosition = value.toString()
+    } else {
+      if (this.ops.lastPosition.toString() === '.') {
+        this.ops.clear()
+      }
+      this.addOps(dot)
     }
   }
 }
