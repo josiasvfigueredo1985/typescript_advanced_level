@@ -7,10 +7,13 @@ import DateTime from './dateTime.js'
 export default class CalculatorControl {
   constructor(
     private readonly display = new Display(),
-    private readonly ops = new Operations()
+    private readonly ops = new Operations({
+      onCalculation: (result: string) => {
+        this.display.content = result
+      },
+    })
   ) {
     new DateTime()
-    this.display.content = '123.456'
     this.buttonsEvent()
   }
 
@@ -40,17 +43,23 @@ export default class CalculatorControl {
             break
           case 'ponto':
             break
-          case 'igual':
-            break
           case 'limpar':
             break
           case 'desfazer':
             break
           case 'porcentagem':
             break
+
+          case 'igual':
+            this.calculate()
+            break
         }
       })
     })
+  }
+
+  calculate(): void {
+    this.ops.calculate()
   }
 
   addOps(value: string): void {
@@ -58,12 +67,24 @@ export default class CalculatorControl {
   }
 
   addNumber(value: number): void {
-    this.display.content = value.toString()
+    if (isNaN(Number(this.ops.lastPosition))) {
+      this.addOps(value.toString())
+    } else {
+      value = Number(this.ops.lastPosition.toString() + value.toString())
+      this.ops.lastPosition = value.toString()
+    }
 
-    this.addOps(value.toString())
+    this.display.content = value.toString()
   }
 
   addOperator(operator: string): void {
-    this.addOps(operator)
+    if (isNaN(Number(this.ops.lastPosition))) {
+      this.ops.lastPosition = operator
+    } else {
+      if (this.ops.length === 0) {
+        this.addOps('0')
+      }
+      this.addOps(operator)
+    }
   }
 }
