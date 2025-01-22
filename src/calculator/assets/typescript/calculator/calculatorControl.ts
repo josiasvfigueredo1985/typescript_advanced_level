@@ -44,6 +44,8 @@ export default class CalculatorControl {
           case 'ponto':
             break
           case 'limpar':
+            this.ops.clear()
+            this.display.content = '0'
             break
           case 'desfazer':
             break

@@ -26,6 +26,10 @@ export default class Operations {
     return this.length
   }
 
+  clear(): void {
+    this.ops = []
+  }
+
   calculate(): void {
     const displayLimit = 12
     // eslint-disable-next-line prefer-const
