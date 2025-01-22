@@ -32,6 +32,12 @@ export default class Operations {
     this.ops = []
   }
 
+  undo(): void {
+    const arr = this.ops
+    arr.pop()
+    this.ops = arr
+  }
+
   calculate(): void {
     const displayLimit = 12
     // eslint-disable-next-line prefer-const

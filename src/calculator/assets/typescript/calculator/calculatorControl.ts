@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 /* eslint-disable no-new */
 import Operations from './operations.js'
 import Display from './display.js'
@@ -50,6 +51,7 @@ export default class CalculatorControl {
             this.display.content = '0'
             break
           case 'desfazer':
+            this.clearLastEntry()
             break
 
           case 'igual':
@@ -88,6 +90,11 @@ export default class CalculatorControl {
       }
       this.addOps(operator)
     }
+  }
+
+  clearLastEntry(): void {
+    this.ops.undo()
+    this.display.content = '_'
   }
 
   addDot(dot: string): void {
