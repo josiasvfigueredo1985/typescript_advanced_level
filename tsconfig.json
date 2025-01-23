@@ -9,8 +9,8 @@
     "sourceMap": true, // Generates source map files for easier debugging
     "outDir": "./dist", // Output directory for compiled files
     "rootDirs": [
-      "src/",
-      "src/calculator/assets/typescript"
+      "src/*",
+      
     ], // Root directory for input files
     /* Decorators Context */
     "useDefineForClassFields": false, // When set to false, allows the compiler to use the previous behavior for class field definitions, enabling better compatibility with decorators.

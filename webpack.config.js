@@ -1,7 +1,11 @@
 const path = require('path');
+const glob = require('glob');
 
 module.exports = {
-  entry: process.env.ENTRY_FILE,
+  entry: {
+    main: process.env.ENTRY_FILE,
+     secondary: glob.sync('./src/calculator/assets/typescript/**/*.ts'),   
+  },
   module: {
     rules: [
       {
