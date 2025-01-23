@@ -8,10 +8,7 @@
     "allowJs": true, // Allows JavaScript files to be part of your TypeScript project
     "sourceMap": true, // Generates source map files for easier debugging
     "outDir": "./dist", // Output directory for compiled files
-    "rootDirs": [
-      "src/*",
-      
-    ], // Root directory for input files
+    "rootDir": "./src", // Root directory for input files
     /* Decorators Context */
     "useDefineForClassFields": false, // When set to false, allows the compiler to use the previous behavior for class field definitions, enabling better compatibility with decorators.
     "experimentalDecorators": true, // Enables the use of decorators, allowing you to annotate classes and methods.

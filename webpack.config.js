@@ -1,11 +1,7 @@
 const path = require('path');
-const glob = require('glob');
 
 module.exports = {
-  entry: {
-    main: process.env.ENTRY_FILE,
-     secondary: glob.sync('./src/calculator/assets/typescript/**/*.ts'),   
-  },
+ entry: process.env.WEBPACK_ENTRY_FILE || './src/index.ts',
   module: {
     rules: [
       {
