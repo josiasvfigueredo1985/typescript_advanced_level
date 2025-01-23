@@ -6,6 +6,8 @@ import DateTime from './dateTime.js'
 
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export default class CalculatorControl {
+  private renderInterval: NodeJS.Timeout | null = null
+
   constructor(
     private readonly display = new Display(),
     private readonly ops = new Operations({
@@ -22,6 +24,7 @@ export default class CalculatorControl {
     document.querySelectorAll('#teclado button').forEach((button) => {
       button.addEventListener('click', (event: Event) => {
         const target = event.target as HTMLButtonElement
+        this.stopRender(this.renderInterval)
         switch (target.id) {
           case 'zero':
           case 'um':
@@ -35,7 +38,6 @@ export default class CalculatorControl {
           case 'nove':
             this.addNumber(Number(target.dataset.valor))
             break
-
           case 'adicao':
           case 'subtracao':
           case 'multiplicacao':
@@ -47,13 +49,12 @@ export default class CalculatorControl {
             this.addDot(target.dataset.valor ?? '')
             break
           case 'limpar':
-            this.ops.clear()
-            this.display.content = '0'
+            this.clearAll()
             break
           case 'desfazer':
             this.clearLastEntry()
+            this.renderInterval = this.renderWaitNewEntry()
             break
-
           case 'igual':
             this.calculate()
             break
@@ -90,6 +91,29 @@ export default class CalculatorControl {
       }
       this.addOps(operator)
     }
+  }
+
+  renderWaitNewEntry(): NodeJS.Timeout {
+    return setInterval(() => {
+      this.waitNewEntry()
+    }, 1000)
+  }
+
+  waitNewEntry(): void {
+    const date = new Date()
+    const waitIcon = date.getSeconds() % 2 === 0 ? '_' : ' '
+    this.display.content = waitIcon
+  }
+
+  stopRender(timeoutFunc: NodeJS.Timeout | null): void {
+    if (timeoutFunc !== null) {
+      clearInterval(timeoutFunc)
+    }
+  }
+
+  clearAll(): void {
+    this.ops.clear()
+    this.display.content = '0'
   }
 
   clearLastEntry(): void {
