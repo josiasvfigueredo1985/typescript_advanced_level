@@ -14,19 +14,19 @@ interface IRegisterCategory extends IBaseRegistration {
   type: string
 }
 
-class BaseRegister<BaseInterface> {
-  create(data: BaseInterface): void {
+class BaseRegister<TBaseInterface> {
+  create(data: TBaseInterface): void {
     console.log('Creating data', data)
   }
 
-  read(id: number): BaseInterface {
+  read(id: number): TBaseInterface {
     console.log('Reading data with id:', id)
     // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-    const data: BaseInterface = {} as BaseInterface
+    const data: TBaseInterface = {} as TBaseInterface
     return data
   }
 
-  update(id: number, updatedData: BaseInterface): BaseInterface {
+  update(id: number, updatedData: TBaseInterface): TBaseInterface {
     console.log('Updating data with id:', id)
     return updatedData
   }

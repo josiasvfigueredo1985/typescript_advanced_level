@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 let results: unknown
 const n = 200
 results = { success: true }

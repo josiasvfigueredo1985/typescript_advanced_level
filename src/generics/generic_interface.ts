@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
-interface IProcessing<TypeInterface> {
-  value: TypeInterface
-  performProcessing: (arg: TypeInterface) => TypeInterface
+interface IProcessing<TTypeInterface> {
+  value: TTypeInterface
+  performProcessing: (arg: TTypeInterface) => TTypeInterface
 }
 
 const text: IProcessing<string> = {

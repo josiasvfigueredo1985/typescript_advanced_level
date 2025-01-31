@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 class Documents {
   private readonly value: string = '123cjkh4f564958ui4hui' // TS
   readonly #number: number = 35 // ECMA format for private

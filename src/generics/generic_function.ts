@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-function returnFirstPosition<AnyArray>(arr: AnyArray[]): AnyArray {
+function returnFirstPosition<TAnyArray>(arr: TAnyArray[]): TAnyArray {
   return arr[0]
 }
 

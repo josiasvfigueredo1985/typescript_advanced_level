@@ -1,17 +1,17 @@
+import type EEnumSmartphones from '../enumerators/enum_smartphones'
 import type INotificationUser from '../interfaces/interface_notification_user'
-import type EnumSmartphones from '../enumerators/enum_smartphones'
 
 export default class NotificationUser implements INotificationUser {
   name: string
   email: string
   phone: string
-  smartphone: EnumSmartphones
+  smartphone: EEnumSmartphones
 
   constructor(
     name: string,
     email: string,
     phone: string,
-    smartphone: EnumSmartphones
+    smartphone: EEnumSmartphones
   ) {
     this.name = name
     this.email = email

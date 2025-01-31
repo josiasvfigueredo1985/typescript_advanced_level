@@ -1,25 +1,25 @@
-enum Permission {
+enum EPermission {
   ADMIN,
   USER,
   READONLY,
 }
 
-console.log(Permission.ADMIN) // 0
-console.log(Permission.USER) // 1
-console.log(Permission.READONLY) // 2
-console.log(Permission.ADMIN.valueOf()) // 0
-console.log(Permission.USER.valueOf()) // 1
-console.log(Permission.READONLY.valueOf()) // 2
+console.log(EPermission.ADMIN) // 0
+console.log(EPermission.USER) // 1
+console.log(EPermission.READONLY) // 2
+console.log(EPermission.ADMIN.valueOf()) // 0
+console.log(EPermission.USER.valueOf()) // 1
+console.log(EPermission.READONLY.valueOf()) // 2
 
-enum PermissionNumber {
+enum EPermissionNumber {
   ADMIN = 1,
   USER,
   READONLY,
 }
-console.log(PermissionNumber.READONLY) // 3
+console.log(EPermissionNumber.READONLY) // 3
 
-for (const key in PermissionNumber) {
-  console.log(PermissionNumber[key])
+for (const key in EPermissionNumber) {
+  console.log(EPermissionNumber[key])
   // Output
   // ADMIN
   // USER
@@ -29,17 +29,17 @@ for (const key in PermissionNumber) {
   // 3
 }
 
-enum PermissionString {
+enum EPermissionString {
   ADMIN = 'Administrator',
   USER = 'User',
   READONLY = 'Readonly User',
 }
 
 // eslint-disable-next-line @typescript-eslint/dot-notation
-console.log(PermissionString['USER']) // User
-console.log(PermissionString.USER) // User
+console.log(EPermissionString['USER']) // User
+console.log(EPermissionString.USER) // User
 
-for (const key in PermissionString) {
+for (const key in EPermissionString) {
   console.log(key)
   // Output
   // ADMIN
@@ -48,11 +48,11 @@ for (const key in PermissionString) {
 }
 
 // Loop to print the enum values
-for (const value of Object.values(PermissionString)) {
+for (const value of Object.values(EPermissionString)) {
   console.log(value)
   // Output
   // Administrator
   // User
   // Readonly User
 }
-console.log(PermissionString.ADMIN === 'Administrator') // true
+console.log((EPermissionString.ADMIN as string) === 'Administrator') // true

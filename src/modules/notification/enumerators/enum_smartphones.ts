@@ -1,8 +1,8 @@
-enum EnumSmartphones {
+enum EEnumSmartphones {
   iphone = 'íPhone',
   Samsung = 'Samsung',
   xiaomi = 'Xiaomi',
   oppo = 'Oppo',
 }
 
-export default EnumSmartphones
+export default EEnumSmartphones

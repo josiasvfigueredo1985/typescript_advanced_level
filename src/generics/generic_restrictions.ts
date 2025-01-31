@@ -18,7 +18,7 @@ interface IManagers {
   accessID: number
 }
 
-function checkUserAccess<U extends IManagers>(user: U): U {
+function checkUserAccess<TUser extends IManagers>(user: TUser): TUser {
   console.log(`Access ID: ${user.accessID}`)
   return user
 }

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 console.log('Hello world! This is my first TypeScript code!')
 
 const users = 'John'

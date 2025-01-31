@@ -4,18 +4,18 @@ interface IMyUser {
   telephone: string
 }
 
-abstract class Notifications {
+abstract class AbNotifications {
   abstract send(user: IMyUser): boolean
 }
 
-class Email extends Notifications {
+class Email extends AbNotifications {
   send(user: IMyUser): boolean {
     console.log(`Sending e-mail to user ${user.email}...`)
     return true
   }
 }
 
-class SMS extends Notifications {
+class SMS extends AbNotifications {
   send(user: IMyUser): boolean {
     console.log(`Sending SMS to user ${user.telephone}...`)
     return true

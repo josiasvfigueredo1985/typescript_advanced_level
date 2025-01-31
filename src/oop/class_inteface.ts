@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
 
 // Abstract class to define specific property
-abstract class CarFactoryInfo {
+abstract class AbCarFactoryInfo {
   constructor(
     public year: number,
     public chassisNumber: string
@@ -9,13 +9,13 @@ abstract class CarFactoryInfo {
 }
 
 // Interface to define common properties
-interface ICarInfo extends CarFactoryInfo {
+interface ICarInfo extends AbCarFactoryInfo {
   model: string
   color: string
 }
 
 // Extending class to access all properties from interface and abstract class
-class CarInfo extends CarFactoryInfo {
+class CarInfo extends AbCarFactoryInfo {
   constructor(
     public model: string,
     public color: string,
